@@ -1,0 +1,19 @@
+{
+  "name": "iecs-commander",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsharsh/IECS-Commander.git"
+  },
+  "author": "Harsh Kumar Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsharsh/IECS-Commander/issues"
+  },
+  "homepage": "https://github.com/itsharsh/IECS-Commander#readme"
+}
