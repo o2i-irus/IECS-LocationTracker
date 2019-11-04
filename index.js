@@ -13,7 +13,7 @@ const locationMap = new Map();
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.send('/tracker.html');
+    res.redirect('/tracker.html');
 });
 
 io.on('connection', socket => {
