@@ -14,6 +14,13 @@ app.get('/', (req, res) => {
     res.send('Server Working');
 });
 
+io.on('connection', socket => {
+    socket.on('updateLocation', ({ lat, lng }) => {
+        console.log('got ping');
+        socket.emit('_pong');
+    });
+});
+
 server.listen(1111, err => {
     if (err) {
         throw err;
