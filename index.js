@@ -2,7 +2,7 @@ const http = require('http');
 const path = require('path');
 const express = require('express');
 const socketIO = require('socket.io');
-const bodyParser = require('body-parser');
+require('dotenv').config();
 
 const app = express();
 const server = http.createServer(app);
@@ -13,7 +13,7 @@ const locationMap = new Map();
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.send('Server Working');
+    res.send('/tracker.html');
 });
 
 io.on('connection', socket => {
