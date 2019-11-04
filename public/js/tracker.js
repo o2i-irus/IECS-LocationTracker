@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(() => {
         navigator.geolocation.getCurrentPosition(pos => {
             const { latitude: lat, longitude: lng } = pos.coords;
-            socket.emit('updateLocations', { latitude, lng })
+            socket.emit('updateLocation', { latitude, lng })
         }, err => {
             console.error(err);
         }, positionOptions);
