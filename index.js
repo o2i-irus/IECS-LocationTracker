@@ -7,6 +7,7 @@ require('dotenv').config();
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
+const port = process.env.PORT || 1111;
 
 const locationMap = new Map();
 
@@ -30,7 +31,7 @@ io.on('connection', socket => {
     });
 });
 
-server.listen(1111, err => {
+server.listen(port, err => {
     if (err) {
         throw err;
     }
